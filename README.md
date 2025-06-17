@@ -25,10 +25,7 @@ venv\Scripts\activate
 
 3. *Install Dependencies*
 
-pip install -r requirements.txt
-fastapi
-uvicorn
-pydantic
+pip install fastapi[all]
 
 
 4. *Run the application*

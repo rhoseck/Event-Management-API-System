@@ -1,7 +1,7 @@
 from schemas.user import UserCreate, UserUpdate, User
 from database import users, registrations
 from models import User as UserModel
-from typing import List
+
 class UserService:
     @staticmethod
     async def create_user(user_data: UserCreate):
@@ -20,7 +20,6 @@ class UserService:
     @staticmethod
     async def get_all_users():
         return users
-
 
     @staticmethod
     async def update_user(user_id: int, user_update: UserUpdate):
@@ -49,33 +48,6 @@ class UserService:
                 user.is_active = False
                 return user
         return None
-    
-
-    # @staticmethod
-    # async def get_users_with_attendance() -> list[User]:
-    #     users_that_attended = []
-    #     for registration in registrations:
-    #         if registration.attended:
-    #             users_that_attended.append(registration.user_id)
-
-    #     users_final_attendance = []
-    #     user_duplicate_check = set()
-    #     for user in users:
-    #         if user.id in users_that_attended and user.id not in user_duplicate_check:
-    #             users_final_attendance.append(User(**user.__dict__))
-    #             user_duplicate_check.add(user.id)
-    #     return users_final_attendance
-
-
-    # @staticmethod
-    # async def get_users_with_attendance() -> list[int]:
-    #     users_that_attended = []
-    #     for registration in registrations:
-    #         if registration.attended:
-    #             users_that_attended.append(registration.user_id)
-
-    #     unique_user_ids = list(set(users_that_attended))
-    #     return unique_user_ids
     
     @staticmethod
     async def get_users_with_attendance() -> list[User]:
