@@ -12,7 +12,7 @@ Before running the application, ensure you have the following installed:
 ## Installation
 
 1. *Clone the Repository*
-git clone https://github.com/yourusername/eventaus.git
+git clone https://github.com/rhoseck/Event-Management-API-System
 cd eventaus
 
 2. *Create and activate Virtual Environment*
