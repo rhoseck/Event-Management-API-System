@@ -17,7 +17,7 @@ class EventCreate(EventBase):
 class EventUpdate(BaseModel):
     title: Optional[str] = None
     location: Optional[str] = None
-    date: Optional[str] = "YYYY-MM-DD"
+    date: Optional[str] = date.today().isoformat()
     event_time: Optional[str] = "00:00"
 
 class Event(EventBase):
